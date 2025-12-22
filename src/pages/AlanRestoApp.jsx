@@ -23,6 +23,11 @@ function AlanRestoApp() {
       <div className="content">
         <TransactionList />
       </div>
+      <footer className="footer">
+        <p className="footer__text">
+          Alan Resto &copy; 2020 | Developed by Alan Creative
+        </p>
+      </footer>
 
 
     </>

@@ -6,7 +6,7 @@ function TransactionList() {
             <div className="transaction__list">
                 <div className="transaction__item">
                     <img
-                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1" 
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
                         alt="Nasi Goreng"
                         className="transaction__image"
                     />
@@ -15,7 +15,7 @@ function TransactionList() {
                 </div>
                 <div className="transaction__item">
                     <img
-                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1" 
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
                         alt="Nasi Goreng"
                         className="transaction__image"
                     />
@@ -24,7 +24,7 @@ function TransactionList() {
                 </div>
                 <div className="transaction__item">
                     <img
-                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1" 
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
                         alt="Nasi Goreng"
                         className="transaction__image"
                     />
@@ -33,7 +33,7 @@ function TransactionList() {
                 </div>
                 <div className="transaction__item">
                     <img
-                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1" 
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
                         alt="Nasi Goreng"
                         className="transaction__image"
                     />
@@ -42,7 +42,7 @@ function TransactionList() {
                 </div>
                 <div className="transaction__item">
                     <img
-                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1" 
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
                         alt="Nasi Goreng"
                         className="transaction__image"
                     />
@@ -51,7 +51,7 @@ function TransactionList() {
                 </div>
                 <div className="transaction__item">
                     <img
-                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1" 
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
                         alt="Nasi Goreng"
                         className="transaction__image"
                     />
@@ -60,7 +60,7 @@ function TransactionList() {
                 </div>
                 <div className="transaction__item">
                     <img
-                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1" 
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
                         alt="Nasi Goreng"
                         className="transaction__image"
                     />
@@ -69,7 +69,7 @@ function TransactionList() {
                 </div>
                 <div className="transaction__item">
                     <img
-                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1" 
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
                         alt="Nasi Goreng"
                         className="transaction__image"
                     />
@@ -78,7 +78,66 @@ function TransactionList() {
                 </div>
             </div>
             <div className="transaction__checkout">
-                Transaction 2
+                Pesanan
+                <div className="checkout__item">
+                    <img
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
+                        alt="Nasi Goreng"
+                        className="transaction__image"
+                    />
+                    <h4 className="transaction__name">Nasi Goreng</h4>
+                    <div>x2</div>
+                    <p className="transaction__price">Rp 15.000</p>
+                </div>
+                <div className="checkout__item">
+                    <img
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
+                        alt="Nasi Goreng"
+                        className="transaction__image"
+                    />
+                    <h4 className="transaction__name">Nasi Goreng</h4>
+                    <div>x2</div>
+                    <p className="transaction__price">Rp 15.000</p>
+                </div>
+                <div className="checkout__item">
+                    <img
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
+                        alt="Nasi Goreng"
+                        className="transaction__image"
+                    />
+                    <h4 className="transaction__name">Nasi Goreng</h4>
+                    <div>x2</div>
+                    <p className="transaction__price">Rp 15.000</p>
+                </div>
+                <div className="checkout__item">
+                    <img
+                        src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
+                        alt="Nasi Goreng"
+                        className="transaction__image"
+                    />
+                    <h4 className="transaction__name">Nasi Goreng</h4>
+                    <div>x2</div>
+                    <p className="transaction__price">Rp 15.000</p>
+                </div>
+
+                <div className="checkout__button">
+                    <button>Clear Cart</button>
+                </div>
+                <div className="group-button">
+                    <div className="checkout__button">
+
+                    <button>Save bills</button>
+                </div>
+                <div className="checkout__button">
+
+                    <button>print bills</button>
+                </div>
+                </div>
+                
+                <div className="checkout__button">
+
+                    <button>charge</button>
+                </div>
             </div>
         </div>
     )
