@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Table from "../../ui/Table";
+import TableList from "../../ui/TableList";
+import "./FoodList.css";
 
 function FoodList() {
     return (
@@ -9,11 +10,10 @@ function FoodList() {
 
             <div className="food__content">
                 <div className="food__add ">
-
                     <NavLink to="/add-food" className="btn">+ Tambah Menu</NavLink>
                 </div>
 
-                <Table />
+                <TableList />
             </div>
         </div>
     );

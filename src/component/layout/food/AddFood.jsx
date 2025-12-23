@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import "./AddFood.css";
 
 function AddFood() {
+
     return (
-        <div className="addfood food food__content">
+        <div className="addfood_container">
             <h2 className="addfood__title">Tambahkan Menu</h2>
 
             <form className="addfood__form">
@@ -12,17 +14,31 @@ function AddFood() {
                 </div>
 
                 <div className="addfood__field">
-                    <label className="addfood__label" htmlFor="image">Gambar</label>
-                    <input className="addfood__input" type="file" id="image" />
+                    <label className="addfood__label">Gambar</label>
+
+                    <div className="upload-wrapper">
+                        <input
+                            type="file"
+                            id="image-upload"
+                            accept="image/*"
+                        />
+                        <div  className="upload-box">
+                            <i class="bi bi-cloud-arrow-up"></i>
+                            <p>drag and drop a file here or click</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="addfood__field">
                     <label className="addfood__label" htmlFor="price">Harga</label>
+                    <div className="input-wrapper">
+                        <p>Rp.</p>
                     <input className="addfood__input" type="text" id="price" />
+                    </div>
                 </div>
 
-                <div className="addfood__actions">
-                    <button className="addfood__button" type="submit">
+                <div className="addfood__action">
+                    <button className="btn" type="submit">
                         Simpan
                     </button>
                 </div>

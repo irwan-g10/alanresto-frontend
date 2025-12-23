@@ -1,3 +1,6 @@
 .table__container table td {
     padding: 1rem 3rem;
 }
+.table__container table tr:nth-child(even) {
+    background-color: #FAFAFA;
+}

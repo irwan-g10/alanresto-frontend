@@ -1,4 +1,6 @@
 import React from "react";
+import Modal from "../modal/Modal";
+import Card from "../../ui/Card";
 
 function TransactionList() {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -7,83 +9,18 @@ function TransactionList() {
         setIsOpen(!isOpen);
     }
 
-
     return (
         <>
             <div className="transaction">
                 <div className="transaction__list">
-                    <div className="transaction__item">
-                        <img
-                            src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                            alt="Nasi Goreng"
-                            className="transaction__image"
-                        />
-                        <h4 className="transaction__name">Nasi Goreng</h4>
-                        <p className="transaction__price">Rp 15.000</p>
-                    </div>
-                    <div className="transaction__item">
-                        <img
-                            src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                            alt="Nasi Goreng"
-                            className="transaction__image"
-                        />
-                        <h4 className="transaction__name">Nasi Goreng</h4>
-                        <p className="transaction__price">Rp 15.000</p>
-                    </div>
-                    <div className="transaction__item">
-                        <img
-                            src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                            alt="Nasi Goreng"
-                            className="transaction__image"
-                        />
-                        <h4 className="transaction__name">Nasi Goreng</h4>
-                        <p className="transaction__price">Rp 15.000</p>
-                    </div>
-                    <div className="transaction__item">
-                        <img
-                            src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                            alt="Nasi Goreng"
-                            className="transaction__image"
-                        />
-                        <h4 className="transaction__name">Nasi Goreng</h4>
-                        <p className="transaction__price">Rp 15.000</p>
-                    </div>
-                    <div className="transaction__item">
-                        <img
-                            src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                            alt="Nasi Goreng"
-                            className="transaction__image"
-                        />
-                        <h4 className="transaction__name">Nasi Goreng</h4>
-                        <p className="transaction__price">Rp 15.000</p>
-                    </div>
-                    <div className="transaction__item">
-                        <img
-                            src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                            alt="Nasi Goreng"
-                            className="transaction__image"
-                        />
-                        <h4 className="transaction__name">Nasi Goreng</h4>
-                        <p className="transaction__price">Rp 15.000</p>
-                    </div>
-                    <div className="transaction__item">
-                        <img
-                            src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                            alt="Nasi Goreng"
-                            className="transaction__image"
-                        />
-                        <h4 className="transaction__name">Nasi Goreng</h4>
-                        <p className="transaction__price">Rp 15.000</p>
-                    </div>
-                    <div className="transaction__item">
-                        <img
-                            src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                            alt="Nasi Goreng"
-                            className="transaction__image"
-                        />
-                        <h4 className="transaction__name">Nasi Goreng</h4>
-                        <p className="transaction__price">Rp 15.000</p>
-                    </div>
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                    
                 </div>
                 <div className="transaction__checkout">
                     <div className="checkout__title">
@@ -152,56 +89,7 @@ function TransactionList() {
                 </div>
             </div>
             {isOpen && (
-                <div className="popup__overlay">
-                    <div className="popup__content">
-                        <h2>Detail Pesanan </h2>
-                        <div className="popup__content-wrapped">
-                            <div className="popup__list">
-                            <div className="food__table">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nama</th>
-                                            <th>Foto</th>
-                                            <th>Harga</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Nasi Goreng</td>
-                                            <td>gambar</td>
-                                            <td>15000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Nasi Goreng</td>
-                                            <td>gambar</td>
-                                            <td>15000</td>
-                                        </tr>
-                                    </tbody>
-
-                                </table>
-                            </div>
-                        </div>
-                        <div className="popup__payment">
-                            uang pembeli (Rp)
-                            <div>
-                                <input type="text" />
-                            </div>
-                            <div>
-
-                            <button onClick={togglePopup}>close</button>
-                            <button>Pay</button>
-                            </div>
-                            <div>
-                                Kembalian: 
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                <Modal isOpen={isOpen} onClose={togglePopup}/>
             )}
         </>
     )

@@ -1,8 +1,8 @@
 import React from "react";
-import "./Table.css";
+import "./TableList.css";
 import TableItem from "./TableItem";
 
-function Table() {
+function TableList() {
 
     const foods = [
         { id: 1, name: "Nasi Goreng", image: "Gambar1", price: 15000 },
@@ -37,4 +37,4 @@ function Table() {
     )
 }
 
-export default Table;
+export default TableList;
