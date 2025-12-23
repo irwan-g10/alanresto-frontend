@@ -36,7 +36,7 @@
     width: 100%;
     height: 150px;
     position: absolute;
-    opacity: 0;
+    /* opacity: 0; */
     cursor: pointer;
 }
 .upload-wrapper .upload-box {

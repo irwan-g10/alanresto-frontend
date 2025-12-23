@@ -19,7 +19,7 @@ function TransactionCheckout({ isOpen, data }) {
                     />
                     <h4 className="transaction__name">{item.name}</h4>
                     <div>x{item.total}</div>
-                    <p className="transaction__price">Rp {item.price.toLocaleString()}</p>
+                    <p className="transaction__price">Rp {item.totalPrice}</p>
                 </div>
             ))}
 

@@ -10,7 +10,7 @@ function TableItem({ number, name, image, price }) {
       <td>
         <img src={image} alt={name} />
       </td>
-      <td>Rp {price.toLocaleString()}</td>
+      <td>Rp {price}</td>
     </tr>
   );
 }
