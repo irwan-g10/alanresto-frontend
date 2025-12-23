@@ -70,6 +70,15 @@ ul {
 
 }
 
+ .food__title {
+    color: #9A9A9A;
+    margin-bottom: 2rem;
+}
+
+.food__content button {
+    max-width: 150px;
+}
+
 .food__content .food__add {
     margin-bottom: 2rem;
 }
@@ -174,14 +183,16 @@ ul {
 }
 
 
-button {
+.btn {
     background-color: #00ACEE;
+    color: white;
     border: none;
     padding: 0.5rem 1rem;
+    text-align: center;
     border-radius: 2px;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
     cursor: pointer;
+    width: 100%;
+
 }
 
 .footer {

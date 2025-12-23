@@ -1,27 +1,44 @@
 import { useState } from 'react'
-import FoodList from '../component/food/foodlist'
-import AddFood from '../component/food/AddFood'
-import TransactionList from '../component/transaction/TransactionList'
+import { NavLink, Outlet } from 'react-router-dom'
 
 function AlanRestoApp() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <nav className="navbar">
         <div className="navbar__brand">
           <i className="bi bi-egg-fried navbar__icon"></i>
-          <a className="navbar__title" href="#">Alan Resto</a>
+          <NavLink to="/"  className="navbar__title">
+            Alan Resto
+          </NavLink>
         </div>
 
         <ul className="navbar__menu">
-          <li className="navbar__item">Food</li>
-          <li className="navbar__item navbar__item--active">Transaksi</li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? 'navbar__item navbar__item--active'
+                : 'navbar__item'
+            }
+          >
+            Food
+          </NavLink>
+          <NavLink
+            to="/transactions"
+            className={({ isActive }) =>
+              isActive
+                ? 'navbar__item navbar__item--active'
+                : 'navbar__item'
+            }
+          >
+            Transactions
+          </NavLink>
         </ul>
       </nav>
 
       <div className="content">
-        <TransactionList />
+        <Outlet />
       </div>
       <footer className="footer">
         <p className="footer__text">
