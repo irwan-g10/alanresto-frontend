@@ -1,16 +1,15 @@
 import React from "react";
 import './Card.css';
 
-function Card() {
+function Card({data, onClick}) {
     return (
-        <div className="card__item">
+        <div className="card__item" onClick={onClick}>
             <img
-                src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
-                alt="Nasi Goreng"
+                src={data.image} alt={data.name}
                 className="card__image"
             />
-            <h4 className="card__name">Nasi Goreng</h4>
-            <p className="card__price">Rp 15.000</p>
+            <h4 className="card__name">{data.name}</h4>
+            <p className="card__price">Rp {data.price.toLocaleString()}</p>
         </div>
     )
 }
