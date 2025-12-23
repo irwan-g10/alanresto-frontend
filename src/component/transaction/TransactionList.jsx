@@ -78,7 +78,10 @@ function TransactionList() {
                 </div>
             </div>
             <div className="transaction__checkout">
-                Pesanan
+                <div className="checkout__title">
+                    <i class="bi bi-person-circle checkout__icon"></i>
+                    <h1>Pesanan</h1>
+                </div>
                 <div className="checkout__item">
                     <img
                         src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2018/09/Resep-Nasi-Bakar-Ayam-Kemangi.jpg?fit=500%2C500&ssl=1"
@@ -121,22 +124,22 @@ function TransactionList() {
                 </div>
 
                 <div className="checkout__button">
-                    <button>Clear Cart</button>
+                    <button className="btn btn-clear">Clear Cart</button>
                 </div>
                 <div className="group-button">
                     <div className="checkout__button">
 
-                    <button>Save bills</button>
+                        <button className="btn">Save bills</button>
+                    </div>
+                    <div className="checkout__button">
+
+                        <button className="btn">print bills</button>
+                    </div>
                 </div>
+
                 <div className="checkout__button">
 
-                    <button>print bills</button>
-                </div>
-                </div>
-                
-                <div className="checkout__button">
-
-                    <button>charge</button>
+                    <button className="btn">charge</button>
                 </div>
             </div>
         </div>
