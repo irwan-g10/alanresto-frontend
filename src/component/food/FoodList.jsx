@@ -48,6 +48,42 @@ function FoodList() {
                                 <td>gambar</td>
                                 <td>15000</td>
                             </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Nasi Goreng</td>
+                                <td>gambar</td>
+                                <td>15000</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Nasi Goreng</td>
+                                <td>gambar</td>
+                                <td>15000</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Nasi Goreng</td>
+                                <td>gambar</td>
+                                <td>15000</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Nasi Goreng</td>
+                                <td>gambar</td>
+                                <td>15000</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Nasi Goreng</td>
+                                <td>gambar</td>
+                                <td>15000</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Nasi Goreng</td>
+                                <td>gambar</td>
+                                <td>15000</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
