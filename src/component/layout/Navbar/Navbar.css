@@ -1,0 +1,37 @@
+.navbar__brand {
+    background-color: #00ACEE;
+    padding: 0.5rem 5rem;
+    font-weight: bold;
+}
+
+.navbar__brand .navbar__icon {
+    font-size: 2rem;
+    color: white;
+}
+
+.navbar__brand .navbar__title {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.navbar__menu {
+    background-color: white;
+    display: flex;
+    gap: 2rem;
+    /* ⬅️ ini jaraknya */
+    font-weight: 700;
+    padding: 0.5rem 0.5rem 0 5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar__menu .navbar__item {
+    padding: 0.5rem 5rem;
+    /* background-color: yellow; */
+}
+
+.navbar__menu .navbar__item--active {
+    /* border-bottom: 3px solid rgb(233, 200, 157); */
+    color: #00ACEE;
+    border-bottom: 3px solid #00ACEE;
+}

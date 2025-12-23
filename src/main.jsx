@@ -1,14 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './styles/styles.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import AlanRestoApp from './pages/AlanRestoApp';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import FoodList from './component/food/FoodList';
-import TransactionList from './component/transaction/TransactionList';
-import AddFood from './component/food/AddFood';
+import TransactionList from './component/layout/transaction/TransactionList';
+import AddFood from './component/layout/food/AddFood';
+import './styles/styles.css';
+import FoodList from './component/layout/food/FoodList';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
