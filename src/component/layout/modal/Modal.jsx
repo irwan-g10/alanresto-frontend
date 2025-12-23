@@ -6,8 +6,6 @@ function Modal({isOpen, onClose}) {
 
     if (!isOpen) return null;
 
-
-
     return (
         <div className="popup__overlay">
             <div className="popup__content">
@@ -17,16 +15,18 @@ function Modal({isOpen, onClose}) {
                         <TableList />
                     </div>
                     <div className="popup__payment">
-                        uang pembeli (Rp)
-                        <div>
+                        <div className='popup__title'>
+                            <h3>Uang Pembeli (Rp)</h3>
+                        </div>
+                        <div className='popup__input'>
                             <input type="text" />
                         </div>
-                        <div>
-                            <button onClick={onClose}>close</button>
-                            <button>Pay</button>
+                        <div className='popup__button'>
+                            <button onClick={onClose} className='popup__button-close'>Close</button>
+                            <button className='btn'>Pay</button>
                         </div>
-                        <div>
-                            Kembalian:
+                        <div className='change'>
+                            <p>Kembalian :</p>
                         </div>
                     </div>
                 </div>

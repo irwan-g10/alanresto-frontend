@@ -15,6 +15,7 @@
 }
 .addfood__field input {
     border: 1px solid #ccc;
+    height: 45px;
     border-radius: 4px;
 }
 
@@ -77,6 +78,7 @@
     width: 60px;
     text-align: center;
     font-weight: bold;
+    color: white;
     margin: 0;
     /* align-items: center; */
 }
