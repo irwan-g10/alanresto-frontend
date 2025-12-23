@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./AddFood.css";
 import { storeFood } from "../../../services/FoodServiews";
+import { useNavigate } from "react-router-dom";
 
 function AddFood() {
 
@@ -8,9 +9,10 @@ function AddFood() {
     const [price, setPrice] = useState('')
     const [image, setImage] = useState(null)
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(name,price,image)
 
         const formData = new FormData()
         formData.append('name', name);
@@ -21,9 +23,11 @@ function AddFood() {
             const response = await storeFood(formData);
             console.log("Response Laravel:", response.data);
             alert(response.data.message);
-        } catch {
-            console.error("Gagal simpan:", error.response?.data);
-            alert("Terjadi kesalahan, cek konsol");
+            navigate('/');
+        } catch (error) {
+            console.log('salah nih bro')
+            console.error("Gagal simpan:", error.response?.data?.message);
+            // alert(error.response?.data?.message || "Terjadi kesalahan");
         }
 
     }
@@ -35,7 +39,7 @@ function AddFood() {
             <form className="addfood__form" onSubmit={handleSubmit}>
                 <div className="addfood__field">
                     <label className="addfood__label" htmlFor="name">Nama</label>
-                    <input className="addfood__input" type="text" id="name"onChange={(e) => setName(e.target.value)} />
+                    <input className="addfood__input" type="text" id="name" onChange={(e) => setName(e.target.value)} />
                 </div>
 
                 <div className="addfood__field">
