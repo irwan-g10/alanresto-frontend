@@ -9,9 +9,21 @@ function TransactionList() {
     const [food, setFood] = React.useState([]);
 
     const dummyData = [
-        { id: 1, name: "Nasi Goreng", price: 15000, image: "url_gambar" },
-        { id: 2, name: "Mie Ayam", price: 12000, image: "url_gambar" },
+        { id: 1, name: "Nasi Goreng", price: 15000, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREUN39vrKXIsD2wjodz8bKlGovEvE7PwIPjA&s" },
+        { id: 2, name: "Mie Ayam", price: 12000, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREUN39vrKXIsD2wjodz8bKlGovEvE7PwIPjA&s" },
     ];
+
+    const filteredFood = Object.values(food.reduce((acc, current) => {
+        if (acc[current.id]) {
+            // Jika ID sudah ada, tambah jumlah totalnya saja
+            acc[current.id].total += 1;
+        } else {
+            // Jika ID belum ada, masukkan datanya dan set total = 1
+            acc[current.id] = { ...current, total: 1 };
+        }
+        return acc;
+    }, {}));
+    console.log("Data di TransactionCheckout:", filteredFood);
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -35,11 +47,11 @@ function TransactionList() {
                     ))}
                 </div>
                 <div className="transaction__checkout">
-                    <TransactionCheckout isOpen={togglePopup}  data={food}/>
+                    <TransactionCheckout isOpen={togglePopup}  data={filteredFood}/>
                 </div>
             </div>
             {isOpen && (
-                <Modal isOpen={isOpen} onClose={togglePopup} />
+                <Modal isOpen={isOpen} onClose={togglePopup} data={filteredFood} />
             )}
         </>
     )

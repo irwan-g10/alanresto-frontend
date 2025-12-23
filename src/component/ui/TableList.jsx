@@ -2,12 +2,7 @@ import React from "react";
 import "./TableList.css";
 import TableItem from "./TableItem";
 
-function TableList() {
-
-    const foods = [
-        { id: 1, name: "Nasi Goreng", image: "Gambar1", price: 15000 },
-        { id: 2, name: "Mie Goreng", image: "Gambar2", price: 12000 },
-    ];
+function TableList({data}) {
 
     return (
         <div className="table__container">
@@ -22,13 +17,13 @@ function TableList() {
                 </thead>
                 <tbody>
                     
-                    {foods.map((food, index) => (
+                    {data.map((food, index) => (
                         <TableItem
                             key={food.id}
                             number={index + 1}
-                            name={food.name}
+                            name={food.total? `${food.name} x${food.total}` : food.name}
                             image={food.image}
-                            price={food.price}
+                            price={food.total ? food.price*food.total : food.price}
                         />
                     ))}
                 </tbody>

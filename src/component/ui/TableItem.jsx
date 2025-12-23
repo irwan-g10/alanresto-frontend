@@ -8,7 +8,7 @@ function TableItem({ number, name, image, price }) {
       <td>{number}</td>
       <td>{name}</td>
       <td>
-        {image}
+        <img src={image} alt={name} />
       </td>
       <td>Rp {price.toLocaleString()}</td>
     </tr>

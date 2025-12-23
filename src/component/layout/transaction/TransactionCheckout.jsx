@@ -2,7 +2,8 @@ import React from "react";
 import './TransactionCheckout.css';
 
 function TransactionCheckout({ isOpen, data }) {
-    console.log("Data di TransactionCheckout:", data);
+
+    
     return (
         <div className="checkout__container">
             <div className="checkout__title">
@@ -17,7 +18,7 @@ function TransactionCheckout({ isOpen, data }) {
                         className="transaction__image"
                     />
                     <h4 className="transaction__name">{item.name}</h4>
-                    <div>x2</div>
+                    <div>x{item.total}</div>
                     <p className="transaction__price">Rp {item.price.toLocaleString()}</p>
                 </div>
             ))}
