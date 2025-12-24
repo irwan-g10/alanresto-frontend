@@ -23,14 +23,6 @@ function FoodList() {
         loadData()
     }, [])
 
-
-    console.log(foods)
-
-    // const dummyData = [
-    //     { id: 1, name: "Nasi Goreng", price: 15000, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREUN39vrKXIsD2wjodz8bKlGovEvE7PwIPjA&s" },
-    //     { id: 2, name: "Mie Ayam", price: 12000, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREUN39vrKXIsD2wjodz8bKlGovEvE7PwIPjA&s" },
-    // ];
-
     return (
         <div className="food__container">
             <p className="food__title">Tambahkan menu yang ada di resto</p>

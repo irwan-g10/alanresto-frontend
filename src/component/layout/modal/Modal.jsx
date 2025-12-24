@@ -1,9 +1,8 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Modal.css';
 import TableList from '../../ui/TableList';
 import AlertModal from './AlertModal';
-import { useNavigate } from 'react-router-dom';
 function Modal({ isOpenCheckout, onClose, data, grandTotal }) {
     const [buyerMoney, setBuyerMoney] = React.useState(0);
     const [isOpenAlert, setIsOpenAlert] = useState(false)
@@ -11,17 +10,12 @@ function Modal({ isOpenCheckout, onClose, data, grandTotal }) {
 
 
     const handleInputChange = (e) => {
-        // setTimeout(() => {
-            setBuyerMoney(e.target.value);
-        // }, 2000);
+        setBuyerMoney(e.target.value);
     };
 
     const togglePopupAlert = () => {
         setIsOpenAlert(!isOpenAlert)
-        
-
     }
-
 
     if (!isOpenCheckout) return null;
 
@@ -53,7 +47,7 @@ function Modal({ isOpenCheckout, onClose, data, grandTotal }) {
                 </div>
             </div>
             {isOpenAlert && (
-                <AlertModal isOpenAlert={isOpenAlert} onClose={onClose}  />
+                <AlertModal isOpenAlert={isOpenAlert} onClose={onClose} />
             )}
         </>
     )

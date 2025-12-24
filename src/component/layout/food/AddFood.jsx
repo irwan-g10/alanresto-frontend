@@ -21,13 +21,10 @@ function AddFood() {
 
         try {
             const response = await storeFood(formData);
-            console.log("Response Laravel:", response.data);
             alert(response.data.message);
             navigate('/');
         } catch (error) {
-            console.log('salah nih bro')
             console.error("Gagal simpan:", error.response?.data?.message);
-            // alert(error.response?.data?.message || "Terjadi kesalahan");
         }
 
     }

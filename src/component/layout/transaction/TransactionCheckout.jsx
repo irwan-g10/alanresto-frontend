@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import './TransactionCheckout.css';
 import { useReactToPrint } from "react-to-print";
 
-function TransactionCheckout({handleClearFood, isOpenCheckout, isOpenAlert, data, grandTotal }) {
+function TransactionCheckout({ handleClearFood, isOpenCheckout, isOpenAlert, data, grandTotal }) {
     const contentRef = useRef(null);
 
-    
+
 
     const handlePrint = useReactToPrint({
         contentRef,
@@ -35,23 +35,23 @@ function TransactionCheckout({handleClearFood, isOpenCheckout, isOpenAlert, data
 
 
 
-            <div className="checkout__button">
-                <button className="btn btn-clear" onClick={handleClearFood}>Clear Cart</button>
-            </div>
-            <div className="group-button">
                 <div className="checkout__button">
-
-                    <button className="btn" onClick={isOpenAlert}>Save bills</button>
+                    <button className="btn btn-clear" onClick={handleClearFood}>Clear Cart</button>
                 </div>
+                <div className="group-button">
+                    <div className="checkout__button">
+
+                        <button className="btn" onClick={isOpenAlert}>Save bills</button>
+                    </div>
+                    <div className="checkout__button">
+
+                        <button className="btn" onClick={handlePrint}>print bills</button>
+                    </div>
+                </div>
+
                 <div className="checkout__button">
-
-                    <button className="btn" onClick={handlePrint}>print bills</button>
+                    <button className="btn" onClick={isOpenCheckout}>Charge Rp. {grandTotal}</button>
                 </div>
-            </div>
-
-            <div className="checkout__button">
-                <button className="btn" onClick={isOpenCheckout}>Charge Rp. {grandTotal}</button>
-            </div>
             </div>
         </div>
     )

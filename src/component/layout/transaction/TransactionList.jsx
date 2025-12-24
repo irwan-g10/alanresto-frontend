@@ -58,12 +58,10 @@ function TransactionList() {
     }
     const onFoodClick = (item) => {
         setSelectedFood((prevFood) => [...prevFood, item]);
-        console.log("Makanan ditambahkan:", item);
     }
     const handleClearFood = () => {
         setSelectedFood([])
     }
-    console.log(selectedFood)
 
     return (
         <>
@@ -81,7 +79,7 @@ function TransactionList() {
 
             </div>
             {isOpenCheckout && (
-                <Modal isOpenCheckout={isOpenCheckout}  onClose={togglePopupCheckout} data={filteredFood} grandTotal={grandTotal} />
+                <Modal isOpenCheckout={isOpenCheckout} onClose={togglePopupCheckout} data={filteredFood} grandTotal={grandTotal} />
             )}
             {isOpenAlert && (
                 <AlertModal isOpenAlert={isOpenAlert} onClose={togglePopupAlert} data={filteredFood} />
