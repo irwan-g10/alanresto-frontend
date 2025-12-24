@@ -33,7 +33,7 @@ function Modal({ isOpenCheckout, onClose, data, grandTotal }) {
                                 <h3>Uang Pembeli (Rp)</h3>
                             </div>
                             <div className='popup__input'>
-                                <input type="text" onChange={handleInputChange} />
+                                <input type="number" onChange={handleInputChange} />
                             </div>
                             <div className='popup__button'>
                                 <button onClick={onClose} className='popup__button-close' >Close</button>
