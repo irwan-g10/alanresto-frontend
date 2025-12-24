@@ -4,9 +4,11 @@ import Card from "../../ui/Card";
 import TransactionCheckout from "./TransactionCheckout";
 import './TransactionList.css';
 import { getAllFoods } from "../../../services/FoodServiews";
+import AlertModal from "../modal/AlertModal";
 
 function TransactionList() {
-    const [isOpen, setIsOpen] = React.useState(false);
+    const [isOpenCheckout, setIsOpenCheckout] = React.useState(false);
+    const [isOpenAlert, setIsOpenAlert] = useState(false)
     const [foods, setFoods] = useState([])
     const [selectedFood, setSelectedFood] = useState([])
     const [loading, setLoading] = useState(true)
@@ -40,12 +42,18 @@ function TransactionList() {
         return acc;
     }, {}));
 
-    const togglePopup = () => {
-        setIsOpen(!isOpen);
+    const togglePopupCheckout = () => {
+        setIsOpenCheckout(!isOpenCheckout);
+    }
+    const togglePopupAlert = () => {
+        setIsOpenAlert(!isOpenAlert)
     }
     const onFoodClick = (item) => {
         setSelectedFood((prevFood) => [...prevFood, item]);
         console.log("Makanan ditambahkan:", item);
+    }
+    const handleClearFood = () => {
+        setSelectedFood([])
     }
     console.log(selectedFood)
 
@@ -61,12 +69,14 @@ function TransactionList() {
                         />
                     ))}
                 </div>
-                <div className="transaction__checkout">
-                    <TransactionCheckout isOpen={togglePopup} data={filteredFood} />
-                </div>
+                    <TransactionCheckout handleClearFood={handleClearFood} isOpenCheckout={togglePopupCheckout} isOpenAlert={togglePopupAlert} data={filteredFood} />
+                
             </div>
-            {isOpen && (
-                <Modal isOpen={isOpen} onClose={togglePopup} data={filteredFood} />
+            {isOpenCheckout && (
+                <Modal isOpenCheckout={isOpenCheckout} onClose={togglePopupCheckout} data={filteredFood} />
+            )}
+            {isOpenAlert && (
+                <AlertModal isOpenAlert={isOpenAlert} onClose={togglePopupAlert} data={filteredFood}/>
             )}
         </>
     )

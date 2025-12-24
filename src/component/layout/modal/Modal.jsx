@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './Modal.css';
 import TableList from '../../ui/TableList';
-function Modal({ isOpen, onClose, data }) {
+function Modal({ isOpenCheckout, onClose, data }) {
     const [change, setChange] = React.useState(0);
     const [buyerMoney, setBuyerMoney] = React.useState(0);
     const [grandTotal, setGrandTotal] = useState(0);
@@ -22,7 +22,7 @@ function Modal({ isOpen, onClose, data }) {
     console.log(grandTotal)
 
 
-    if (!isOpen) return null;
+    if (!isOpenCheckout) return null;
 
     return (
         <div className="popup__overlay">

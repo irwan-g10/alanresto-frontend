@@ -6,14 +6,14 @@
     /* align-self: start; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.transaction__checkout .checkout__title {
+.checkout__title {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
 }
-.transaction__checkout .checkout__icon {
+.checkout__icon {
     /* color: white; */
     font-size: 3rem;
 }
@@ -33,7 +33,7 @@
     /* color: red; */
 }
 
-.transaction__checkout .group-button {
+ .group-button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
