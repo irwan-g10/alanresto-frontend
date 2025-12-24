@@ -12,6 +12,14 @@ function TransactionList() {
     const [foods, setFoods] = useState([])
     const [selectedFood, setSelectedFood] = useState([])
     const [loading, setLoading] = useState(true)
+    const [grandTotal, setGrandTotal] = useState(0);
+
+    useEffect(() => {
+        if (filteredFood && filteredFood.length > 0) {
+            const total = filteredFood.reduce((acc, item) => acc + (item.totalPrice || 0), 0);
+            setGrandTotal(total);
+        }
+    })
 
     const loadData = async () => {
         try {
@@ -36,8 +44,8 @@ function TransactionList() {
             acc[current.id].totalPrice = acc[current.id].total * acc[current.id].price;
         } else {
             // Jika ID belum ada, masukkan datanya dan set total = 1
-            acc[current.id] = { ...current, total: 1, totalPrice: current.price};
-            
+            acc[current.id] = { ...current, total: 1, totalPrice: current.price };
+
         }
         return acc;
     }, {}));
@@ -69,14 +77,14 @@ function TransactionList() {
                         />
                     ))}
                 </div>
-                    <TransactionCheckout handleClearFood={handleClearFood} isOpenCheckout={togglePopupCheckout} isOpenAlert={togglePopupAlert} data={filteredFood} />
-                
+                <TransactionCheckout handleClearFood={handleClearFood} isOpenCheckout={togglePopupCheckout} isOpenAlert={togglePopupAlert} data={filteredFood} grandTotal={grandTotal} />
+
             </div>
             {isOpenCheckout && (
-                <Modal isOpenCheckout={isOpenCheckout} onClose={togglePopupCheckout} data={filteredFood} />
+                <Modal isOpenCheckout={isOpenCheckout}  onClose={togglePopupCheckout} data={filteredFood} grandTotal={grandTotal} />
             )}
             {isOpenAlert && (
-                <AlertModal isOpenAlert={isOpenAlert} onClose={togglePopupAlert} data={filteredFood}/>
+                <AlertModal isOpenAlert={isOpenAlert} onClose={togglePopupAlert} data={filteredFood} />
             )}
         </>
     )

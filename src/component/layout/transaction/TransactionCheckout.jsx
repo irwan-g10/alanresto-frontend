@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './TransactionCheckout.css';
 import { useReactToPrint } from "react-to-print";
 
-function TransactionCheckout({handleClearFood, isOpenCheckout, isOpenAlert, data }) {
+function TransactionCheckout({handleClearFood, isOpenCheckout, isOpenAlert, data, grandTotal }) {
     const contentRef = useRef(null);
+
+    
 
     const handlePrint = useReactToPrint({
         contentRef,
@@ -48,7 +50,7 @@ function TransactionCheckout({handleClearFood, isOpenCheckout, isOpenAlert, data
             </div>
 
             <div className="checkout__button">
-                <button className="btn" onClick={isOpenCheckout}>charge</button>
+                <button className="btn" onClick={isOpenCheckout}>Charge Rp. {grandTotal}</button>
             </div>
             </div>
         </div>

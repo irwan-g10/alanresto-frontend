@@ -63,7 +63,7 @@ function AddFood() {
                     <label className="addfood__label" htmlFor="price">Harga</label>
                     <div className="input-wrapper">
                         <p>Rp.</p>
-                        <input className="addfood__input" type="text" id="price" onChange={(e) => setPrice(e.target.value)} />
+                        <input className="addfood__input" type="number" id="price" onChange={(e) => setPrice(e.target.value)} />
                     </div>
                 </div>
 
